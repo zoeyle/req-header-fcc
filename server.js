@@ -36,7 +36,6 @@ app.get('/', function(req,res){
   var lang = req.header['Accept-Language'];
   var ip  = req.ip;
   var opsys = req.header['User-Agent'];
-  data.appData = JSON.stringify();
   res.send({ 'ipaddress': ip, 'language' : lang, 'software' : opsys});
   
 });
