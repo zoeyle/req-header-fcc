@@ -16,7 +16,7 @@ $(function() {
 
   $('button').submit(function(event) {
     event.preventDefault();
-    $('#show').appendTo('#info'); 
+    $('<p></p>').text(toRet).appendTo('#show'); 
  
     });
 
