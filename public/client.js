@@ -3,24 +3,26 @@
 
 // by default, you've got jQuery,
 // add other scripts at the bottom of index.html
-<script src="/server.js"></script>
 
-$(function() {
-  console.log('hello world :o');
+// $(function() {
+//   console.log('hello world :o');
   
-  $.get('/info', function(info) {
-    info.forEach(function(dream) {
-      $('<li></li>').text(dream).appendTo('ul#dreams');
-    });
-  });
+//   $.get('/info', function(info) {
+//     info.
+//     });
+//   });
 
-  $('form').whoami(function(event) {
-    event.preventDefault();
-    // var dream = $('input').val();
-    $.post('/info?' + $.param({info: ret}), function() {
-      $("<p></p>").text(ret).appendTo("info");
+//   $('whoami').whoami(function(event) {
+//     event.preventDefault();
+//     // var dream = $('input').val();
+    
  
-    });
-  });
+//     });
+//   });
 
-});
+// });
+
+ $(document).ready(function() {
+    $("#target4").remove();
+    $("#target2").appendTo("#right-well");
+  });
