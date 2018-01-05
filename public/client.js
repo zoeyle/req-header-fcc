@@ -3,17 +3,18 @@
 
 // by default, you've got jQuery,
 // add other scripts at the bottom of index.html
+<script src="server.js"></script>
 
 $(function() {
   console.log('hello world :o');
   
-  $.get('/dreams', function(dreams) {
-    dreams.forEach(function(dream) {
+  $.get('/info', function(info) {
+    info.forEach(function(dream) {
       $('<li></li>').text(dream).appendTo('ul#dreams');
     });
   });
 
-  $('form').submit(function(event) {
+  $('form').who(function(event) {
     event.preventDefault();
     var dream = $('input').val();
     $.post('/dreams?' + $.param({dream: dream}), function() {
