@@ -11,9 +11,9 @@ var app = express();
 app.use(express.static('public'));
 
 // http://expressjs.com/en/starter/basic-routing.html
-app.get("/", function (request, response) {
-  response.sendFile(__dirname + '/views/index.html');
-});
+// app.get("/", function (request, response) {
+//   response.sendFile(__dirname + '/views/index.html');
+// });
 
 // app.get("/dreams", function (request, response) {
 //   response.send(dreams);
@@ -31,12 +31,12 @@ app.get("/", function (request, response) {
 //   "Climb a really tall mountain",
 //   "Wash the dishes"
 // ];
-
+app.set('views', 'index');
 app.get('/', function(req,res){
   var lang = req.header['Accept-Language'];
   var ip  = req.ip;
   var opsys = req.header['User-Agent'];
-  res.send({ 'ipaddress': ip, 'language' : lang, 'software' : opsys});
+  res.render('index', { info: { 'ipaddress': ip, 'language' : lang, 'software' : opsys}});
   
 });
 
