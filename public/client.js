@@ -4,17 +4,17 @@
 // by default, you've got jQuery,
 // add other scripts at the bottom of index.html
 
-
+var toRet;
 
 $(function() {
   console.log('hello world :o');
   
   $.get('/ret', function(ret) {
-  
+    toRet = ret;
   });
   
 
-  $('whoami').whoami(function(event) {
+  $('button').submit(function(event) {
     event.preventDefault();
     $('#show').appendTo('#info'); 
  
