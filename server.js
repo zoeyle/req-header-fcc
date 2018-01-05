@@ -12,11 +12,18 @@ var ret = null;
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
+app.get("*", function (req, response) {
+  var lang = req.headers['accept-language'];
+  var ip  = req.ip;
+  var opsys = req.headers['user-agent'];
+  ret = { "ipaddress": ip, "language" : lang, "software" : opsys};
+  response.sendFile(__dirname + '/views/index.html');
+});
 
 
-// app.get("/dreams", function (request, response) {
-//   response.send(dreams);
-// });
+app.get("/dreams", function (request, response) {
+  response.send(dreams);
+});
 
 // // could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body
 // app.post("/dreams", function (request, response) {
@@ -36,13 +43,6 @@ app.use(express.static('public'));
 // });
 
 http://expressjs.com/en/starter/basic-routing.html
-app.get("/", function (req, response) {
-  var lang = req.headers['accept-language'];
-  var ip  = req.ip;
-  var opsys = req.headers['user-agent'];
-  ret = { "ipaddress": ip, "language" : lang, "software" : opsys};
-  response.sendFile(__dirname + '/views/index.html');
-});
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
