@@ -31,8 +31,6 @@ app.use(express.static('public'));
 //   "Climb a really tall mountain",
 //   "Wash the dishes"
 // ];
-app.set('view engine', 'html');
-app.set('views', __dirname + '/views');
 app.get('/', function(req,res){
   var lang = req.header['Accept-Language'];
   var ip  = req.ip;
