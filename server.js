@@ -21,8 +21,8 @@ app.get("*", function (req, response) {
 });
 
 
-app.get("/dreams", function (request, response) {
-  response.send(dreams);
+app.get("/info", function (request, response) {
+  response.send(JSON.stringify(ret));
 });
 
 // // could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body

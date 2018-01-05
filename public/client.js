@@ -9,8 +9,8 @@ var toRet;
 $(function() {
   console.log('hello world :o');
   
-  $.get('/ret', function(ret) {
-    toRet = JSON.stringify(ret);
+  $.get('/info', function(ret) {
+    toRet = ret;
     console.log(JSON.stringify(toRet));
   });
   
