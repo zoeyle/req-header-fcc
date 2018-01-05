@@ -12,10 +12,7 @@ var ret = null;
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
-// http://expressjs.com/en/starter/basic-routing.html
-// app.get("/", function (request, response) {
-//   response.sendFile(__dirname + '/views/index.html');
-// });
+
 
 // app.get("/dreams", function (request, response) {
 //   response.send(dreams);
@@ -33,12 +30,17 @@ app.use(express.static('public'));
 //   "Climb a really tall mountain",
 //   "Wash the dishes"
 // ];
-app.get('/', function(req,res){
-  var lang = req.header['Accept-Language'];
+app.get('*', function(req,res){
+  var lang = req.headers['accept-language'];
   var ip  = req.ip;
-  var opsys = req.header['User-Agent'];
+  var opsys = req.headers['user-agent'];
   ret = { "ipaddress": ip, "language" : lang, "software" : opsys};
-  res.end(ret);
+  res.end(JSON.stringify(ret));
+});
+
+http://expressjs.com/en/starter/basic-routing.html
+app.get("/", function (request, response) {
+  response.sendFile(__dirname + '/views/index.html');
 });
 
 // listen for requests :)
