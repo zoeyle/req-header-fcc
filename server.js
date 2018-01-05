@@ -4,7 +4,7 @@
 // init project
 var express = require('express');
 var app = express();
-
+var ret;
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
@@ -33,11 +33,11 @@ app.get("/", function (request, response) {
 //   "Wash the dishes"
 // ];
 
-app.get('/whoami', function(req,res){
+app.get('/', function(req,res){
   var lang = req.header['Accept-Language'];
   var ip  = req.ip;
   var opsys = req.header['User-Agent'];
-  res.send({ 'ipaddress': ip, 'language' : lang, 'software' : opsys});
+  ret = { 'ipaddress': ip, 'language' : lang, 'software' : opsys};
   
 });
 

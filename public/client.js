@@ -3,7 +3,7 @@
 
 // by default, you've got jQuery,
 // add other scripts at the bottom of index.html
-<script src="server.js"></script>
+<script src="/server.js"></script>
 
 $(function() {
   console.log('hello world :o');
@@ -14,11 +14,11 @@ $(function() {
     });
   });
 
-  $('form').who(function(event) {
+  $('form').whoami(function(event) {
     event.preventDefault();
-    var dream = $('input').val();
-    $.post('/dreams?' + $.param({dream: dream}), function() {
-      $('<li></li>').text(dream).appendTo('ul#dreams');
+    // var dream = $('input').val();
+    $.post('/info?' + $.param({dream: ret}), function() {
+      $('<li></li>').text(dream).appendTo('p#show');
       $('input').val('');
       $('input').focus();
     });
