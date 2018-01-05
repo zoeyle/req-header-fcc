@@ -22,7 +22,19 @@
 
 // });
 
- $(document).ready(function() {
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-  });
+$(function() {
+  console.log('hello world :o');
+  
+  $.get('/info', function(info) {
+    $('#info').remove();
+    });
+  
+
+  $('whoami').whoami(function(event) {
+    event.preventDefault();
+    $('#show').appendTo('#info'); 
+ 
+    });
+
+
+});
