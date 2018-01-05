@@ -37,7 +37,7 @@ app.get('/whoami', function(req,res){
   var lang = req.header['Accept-Language'];
   var ip  = req.ip;
   var opsys = req.header['User-Agent'];
-  res.send({ 'ipaddress': ip, '
+  res.send({ 'ipaddress': ip, 'language' : lang, 'software' : opsys});
   
 });
 
