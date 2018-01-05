@@ -18,7 +18,7 @@ $(function() {
     event.preventDefault();
     // var dream = $('input').val();
     $.post('/info?' + $.param({info: ret}), function() {
-      $('<li></li>').text(ret).appendTo('');
+      $("<p></p>").text(ret).appendTo("info");
  
     });
   });
