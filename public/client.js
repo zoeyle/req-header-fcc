@@ -10,16 +10,18 @@ $(function() {
   console.log('hello world :o');
   
   $.get('/ret', function(ret) {
-    toRet = ret;
+    toRet = JSON.stringify(ret);
+    console.log(JSON.stringify(toRet));
   });
   
 
   $('button').submit(function(event) {
     event.preventDefault();
-    console.log(JSON.stringify(toRet));
-    $('<p></p>').text(toRet).appendTo('section#show'); 
+    // console.log(JSON.stringify(toRet));
+     // $.post('/ret?', function() {
+    $('<p></p>').text(toRet).appendTo('#show'); 
  
-    });
+    // });
 
-
+});
 });
