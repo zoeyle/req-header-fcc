@@ -33,7 +33,10 @@ app.get("/", function (request, response) {
 //   "Wash the dishes"
 // ];
 
-
+app.get('/whoami', function(req,res){
+  var lang = req.headers[Accept-Language];
+  
+});
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
