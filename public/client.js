@@ -9,9 +9,9 @@
 $(function() {
   console.log('hello world :o');
   
-  $.get('/info', function(info) {
-    $('#info').remove();
-    });
+  $.get('/ret', function(ret) {
+  
+  });
   
 
   $('whoami').whoami(function(event) {
