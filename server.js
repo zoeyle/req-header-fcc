@@ -4,7 +4,7 @@
 // init project
 var express = require('express');
 var app = express();
-var ret;
+var ret ={ 'ipaddress': null, 'language' : null, 'software' : null};;
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 

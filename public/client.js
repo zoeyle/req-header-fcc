@@ -17,10 +17,9 @@ $(function() {
   $('form').whoami(function(event) {
     event.preventDefault();
     // var dream = $('input').val();
-    $.post('/info?' + $.param({dream: ret}), function() {
-      $('<li></li>').text(dream).appendTo('p#show');
-      $('input').val('');
-      $('input').focus();
+    $.post('/info?' + $.param({info: ret}), function() {
+      $('<li></li>').text(ret).appendTo('');
+ 
     });
   });
 
