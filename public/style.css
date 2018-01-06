@@ -19,11 +19,22 @@ h1 {
   font-size: 700%;
   font-weight: bold;
   color: #c266ff;
+/*    text-outline: 2px 2px  #b3d9ff; */
+   text-shadow:
+    -2px -2px 0 #b3d9ff,
+    2px -2px 0 #b3d9ff,
+    -2px 2px 0 #b3d9ff,
+    2px 2px 0 #b3d9ff;  
 }
 
 h2{
    font-size: 300%;
-    color: #ad33ff;
+    color: red;
+  text-shadow:
+    -2px -2px 0 #b3d9ff,
+    2px -2px 0 #b3d9ff,
+    -2px 2px 0 #b3d9ff,
+    2px 2px 0 #b3d9ff; 
 }
 
 .bold {
