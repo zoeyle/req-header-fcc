@@ -20,9 +20,13 @@ app.get("*", function (req, res) {
   res.end();
 });
 
+app.get('/', function(req,res){
+  res.sendFile(__dirname + '/views/index.html');
+  // res.end(JSON.stringify(ret));
+});
 
 app.get("/info", function (request, response) {
-  response.send(JSON.stringify(ret));
+  response.send(ret);
 });
 
 // // could also use the POST body instead of query string: http://expressjs.com/en/api.html#req.body
@@ -37,10 +41,7 @@ app.get("/info", function (request, response) {
 //   "Climb a really tall mountain",
 //   "Wash the dishes"
 // ];
-app.get('/', function(req,res){
-  res.sendFile(__dirname + '/views/index.html');
-  // res.end(JSON.stringify(ret));
-});
+
 
 // http://expressjs.com/en/starter/basic-routing.html
 
