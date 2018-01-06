@@ -34,15 +34,16 @@ div{
 
 .align-center{
     display: flex;
-    
+    justify-content: center;
     width: 50%;
     padding: 10px;
+  text-align:center;
   
 }
 
 
 img{
-  display: block;
+  display: flex;
   margin: auto;
   width: 30%
 }  
