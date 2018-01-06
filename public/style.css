@@ -33,7 +33,8 @@ div{
 } 
 
 .align-center{
-    margin: auto;
+    display: flex;
+    
     width: 50%;
     padding: 10px;
   
