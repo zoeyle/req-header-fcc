@@ -4,20 +4,22 @@
 // by default, you've got jQuery,
 // add other scripts at the bottom of index.html
 
-var toRet;
+var toRet="hi";
 
 $(function() {
-  console.log('hello world :o');
+  console.log(toRet);
   
   $.get('/info', function(ret) {
     toRet = ret;
-    console.log(JSON.stringify(toRet));
+    
+    console.log(toRet);
   });
   
 
   $('button').submit(function(event) {
     event.preventDefault();
-    // console.log(JSON.stringify(toRet));
+    window.alert(toRet);
+    console.log(JSON.stringify(toRet));
      // $.post('/ret?', function() {
     $('#show').text(toRet); 
  
