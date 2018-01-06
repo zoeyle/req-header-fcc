@@ -18,18 +18,19 @@ h1 {
   text-align: center;
   font-size: 700%;
   font-weight: bold;
-  color: #c266ff;
+  color:  #f2e6ff;
 /*    text-outline: 2px 2px  #b3d9ff; */
-   text-shadow:
-    -2px -2px 0 #b3d9ff,
-    2px -2px 0 #b3d9ff,
-    -2px 2px 0 #b3d9ff,
-    2px 2px 0 #b3d9ff;  
+/*    text-shadow:
+    -10px -10px 5px #c266ff,
+    10px -10px 5px #c266ff,
+    -10px 10px 5px #c266ff,
+    10px 10px 5px #c266ff;   */
+text-shadow: 1px 1px 2px purple, 0 0 50px #c266ff, 0 0 5px darkblue;
 }
 
 h2{
    font-size: 300%;
-    color: red;
+    color: crimson;
   text-shadow:
     -2px -2px 0 #b3d9ff,
     2px -2px 0 #b3d9ff,
@@ -65,7 +66,7 @@ div{
 
 
 img{
-  display: flex;
+  display: block;
   margin: auto;
   width: 30%
 }  
@@ -84,8 +85,9 @@ form {
 
 
 button {
+  width: 100%;
   padding: 10px 20px;
-  font-size: 55px;
+  font-size: 300%;
   font-weight: bold;
   font-family: helvetica;
   border-radius: 10px;
