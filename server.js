@@ -20,7 +20,8 @@ app.get('/', function(req,res){
 
 app.get("/info", function (req, response) {
   var lang = req.headers['accept-language'];
-  var ip  = req.ip;
+  lang = lang.substring(0, lang.indexOf(','));
+  var ip  = req.ip.substring(7);;
   var opsys = req.headers['user-agent'];
   ret = { "ipaddress": ip, "language" : lang, "software" : opsys};
   response.send(ret);

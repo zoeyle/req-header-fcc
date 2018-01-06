@@ -40,7 +40,7 @@ h2{
 
 p {
   font-size: 150%;
-  max-width: 600px;
+/*   max-width: 600px; */
   color : #ebccff;
 }
 
@@ -81,11 +81,10 @@ form {
 
 
 button {
-  max-width: 100%;
+  max-width: 300%;
   padding: 10px 20px;
-  font-size: 300%;
+  font-size: 20px;
   font-weight: bold;
-  font-family: helvetica;
   border-radius: 10px;
   background-color: lightgrey;
   border: 1px solid grey;
@@ -101,15 +100,7 @@ button:active {
   box-shadow: none;
 }
 
-footer {
-  margin-top: 50px;
-  padding-top: 25px;
-  border-top: 1px solid lightgrey;
-}
 
-footer > a {
-  color: #BBBBBB;
-}
 
 .nicejob {
   text-decoration: line-through;
