@@ -12,7 +12,7 @@ $(function() {
   $.get('/info', function(ret) {
     toRet = ret;
     
-    console.log(toRet);
+    // console.log(toRet);
   });
   
 

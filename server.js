@@ -12,20 +12,21 @@ var ret = null;
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
-app.get("*", function (req, res) {
-  var lang = req.headers['accept-language'];
-  var ip  = req.ip;
-  var opsys = req.headers['user-agent'];
-  ret = { "ipaddress": ip, "language" : lang, "software" : opsys};
-  res.end();
-});
+// app.get("*", function (req, res) {
+
+//   res.end();
+// });
 
 app.get('/', function(req,res){
   res.sendFile(__dirname + '/views/index.html');
   // res.end(JSON.stringify(ret));
 });
 
-app.get("/info", function (request, response) {
+app.get("/info", function (req, response) {
+  var lang = req.headers['accept-language'];
+  var ip  = req.ip;
+  var opsys = req.headers['user-agent'];
+  ret = { "ipaddress": ip, "language" : lang, "software" : opsys};
   response.send(ret);
 });
 
