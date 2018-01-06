@@ -16,7 +16,7 @@ body {
 
 h1 {
   font-weight: bold;
-  color: purple;
+  color: #ad33ff;
 }
 
 .bold {
@@ -25,7 +25,12 @@ h1 {
 
 p {
   max-width: 600px;
+  color : #ebccff;
 }
+
+div{
+   padding:10px 20% 15px 20%;
+} 
 
 form {
   margin-bottom: 25px;
