@@ -21,7 +21,7 @@ $(function() {
     // window.alert(JSON.stringify(toRet));
     // console.log(JSON.stringify(toRet));
      // $.post('/ret?', function() {
-    $('#show').html(JSON.stringify(toRet); 
+    $('#show').html(JSON.stringify(toRet)); 
  
     // });
 
