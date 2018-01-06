@@ -12,10 +12,6 @@ var ret = null;
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
-// app.get("*", function (req, res) {
-
-//   res.end();
-// });
 
 app.get('/', function(req,res){
   res.sendFile(__dirname + '/views/index.html');
