@@ -16,7 +16,7 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 700%;
+  font-size: 600%;
   font-weight: bold;
   color:  #f2e6ff;
 /*    text-outline: 2px 2px  #b3d9ff; */
@@ -40,6 +40,7 @@ h2{
 
 p {
   font-size: 150%;
+  padding: 0 0 0 30px;
 /*   max-width: 600px; */
   color : #ebccff;
 }
@@ -83,13 +84,14 @@ form {
 button {
   max-width: 300%;
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   border-radius: 10px;
   background-color: lightgrey;
   border: 1px solid grey;
   box-shadow: 2px 2px teal;
   cursor: pointer;
+  word-wrap: break-word;
 }
 
 button:hover {

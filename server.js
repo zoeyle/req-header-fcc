@@ -23,6 +23,7 @@ app.get("/info", function (req, response) {
   lang = lang.substring(0, lang.indexOf(','));
   var ip  = req.ip.substring(7);;
   var opsys = req.headers['user-agent'];
+  opsys = opsys.substring(opsys.indexOf('(')+1, opsys.indexOf(')'));
   ret = { "ipaddress": ip, "language" : lang, "software" : opsys};
   response.send(ret);
 });
