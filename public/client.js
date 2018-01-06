@@ -19,7 +19,7 @@ $(function() {
     event.preventDefault();
     // console.log(JSON.stringify(toRet));
      // $.post('/ret?', function() {
-    $('<p></p>').text(toRet).appendTo('#show'); 
+    $('#show').text(toRet); 
  
     // });
 
