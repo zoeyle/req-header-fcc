@@ -16,12 +16,12 @@ $(function() {
   });
   
 
-  $('button').submit(function(event) {
+  $('button').click(function(event) {
     event.preventDefault();
-    window.alert(toRet);
-    console.log(JSON.stringify(toRet));
+    // window.alert(JSON.stringify(toRet));
+    // console.log(JSON.stringify(toRet));
      // $.post('/ret?', function() {
-    $('#show').text(toRet); 
+    $('#show').html(JSON.stringify(toRet); 
  
     // });
 
