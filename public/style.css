@@ -15,8 +15,15 @@ body {
 }
 
 h1 {
+  text-align: center;
+  font-size: 700%;
   font-weight: bold;
-  color: #ad33ff;
+  color: #c266ff;
+}
+
+h2{
+   font-size: 300%;
+    color: #ad33ff;
 }
 
 .bold {
@@ -24,6 +31,7 @@ h1 {
 }
 
 p {
+  font-size: 150%;
   max-width: 600px;
   color : #ebccff;
 }
@@ -34,10 +42,11 @@ div{
 } 
 
 .align-center{
-    display: flex;
-    
+/*     display: inline; */
+    margin-left: auto;
+    margin-right: auto;
 /*     justify-content: center; */
-    width: 50%;
+    width: 30%;
     padding: 10px;
 /*     text-align:center; */
   
@@ -64,8 +73,10 @@ form {
 
 
 button {
-  padding: 20px 30px;
-  font-size: 50px;
+  padding: 10px 20px;
+  font-size: 55px;
+  font-weight: bold;
+  font-family: helvetica;
   border-radius: 10px;
   background-color: lightgrey;
   border: 1px solid grey;
@@ -79,10 +90,6 @@ button:hover {
 
 button:active {
   box-shadow: none;
-}
-
-li {
-  margin-bottom: 5px;
 }
 
 footer {
